@@ -304,23 +304,112 @@ footer img{
     color: black;
 }
 
-@media screen and (max-width: 600px) {
-    header nav .right a{
-        display: none;
+
+
+/* ############################ */
+/* RESPONSIVE DESIGN OPTIMISÉ */
+/* ############################ */
+
+/* Tablettes et écrans moyens */
+@media (max-width: 991px) {
+    section {
+        padding: 40px 5%;
     }
-    .presentation .product-presentation h1{
-        font-size: 2em;
+    .presentation .product-presentation h1 {
+        font-size: 3rem;
     }
+}
+
+/* Mobiles (Smartphones) */
+@media (max-width: 768px) {
+    /* --- Navigation Mobile --- */
+    #menu-icon {
+        display: block !important; /* On affiche le burger */
+    }
+
+    @media (max-width: 768px) {
+    /* ... (tes autres règles) ... */
+
+    header nav .right {
+        position: fixed; /* Fixé par rapport à l'écran, pas au header */
+        top: 0;
+        right: -100%; /* Il attend sagement à droite de l'écran */
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5); /* Noir profond pour l'aspect haut de gamme */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre les liens verticalement au milieu de l'écran */
+        align-items: center;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* Animation fluide */
+        z-index: 1000; /* Passe au-dessus de TOUT */
+    }
+
+    /* Quand on clique sur le burger, le menu glisse vers la gauche */
+    header nav .right.active {
+        right: 0;
+    }
+
+    /* Pour que l'icône burger reste visible au-dessus du menu noir */
+    #menu-icon {
+        position: relative;
+        z-index: 1001; 
+        display: block !important;
+    }
+    
+    header nav .right p {
+        margin: 1.5rem 0;
+        font-size: 1.8rem; /* On grossit le texte pour le confort du pouce */
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+    /* --- Hero Section (L'émotion d'abord) --- */
+    .presentation {
+        flex-direction: column-reverse; /* L'IMAGE PASSE AU DESSUS OU LE TEXTE EN DESSOUS */
+        text-align: center;
+        margin-top: 15%;
+    }
+
+    .presentation .product-presentation {
+        width: 100%;
+    }
+
+    .presentation .product-presentation h1 {
+        font-size: 2.2rem;
+        width: 100%;
+    }
+
+    .presentation .product-presentation h1 span {
+        font-size: 1.5rem;
+    }
+
+    /* On ne cache plus l'image, on l'adapte ! */
     .presentation .image-presentation {
-        display: none;
-    }
-    .first .product-presentation .small-images .small img {
-        width: 80px;
-    }
-    footer {
-        justify-content: flex-start;
-    }
-    footer .column {
+        display: block; 
         width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .first .product-presentation .small-images {
+        justify-content: center;
+    }
+
+    /* --- Avis Clients --- */
+    .reviews-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+
+    /* --- Footer --- */
+    footer {
+        grid-template-rows: 1fr;
+        text-align: center;
+    }
+
+    footer .social, footer .paiement {
+        justify-content: center;
+        display: grid;
     }
 }
