@@ -1,0 +1,182 @@
+/* Variables de rappel */
+:root {
+    --rouge: rgb(250, 74, 74);
+    --text: #333;
+    --ligth: #fff;
+    --second: #f4f4f4;
+}
+
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/votre-image-fond.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--ligth);
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 1rem 0;
+}
+
+.hero-content span {
+    letter-spacing: 5px;
+    color: var(--rouge);
+    font-weight: bold;
+}
+
+/* Manifeste */
+.manifesto {
+    padding: 80px 10%;
+    background: var(--ligth);
+}
+
+.manifesto-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.manifesto h2 {
+     font-size: 2.5rem; 
+     margin-bottom: 2rem; 
+}
+.manifesto h2 span {
+     color: var(--rouge); 
+}
+.manifesto p span {
+     color: var(--rouge); 
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item h3 { font-size: 3rem; color: var(--rouge); }
+
+/* Locaux Grid */
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.loc-card {
+    background: var(--second);
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.4s;
+    border: 1px solid transparent;
+}
+
+.loc-card:hover {
+    border-color: var(--rouge);
+    transform: translateY(-10px);
+    background: var(--ligth);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.loc-card i { font-size: 3rem; color: var(--rouge); margin-bottom: 15px; }
+
+/* Info Center */
+.info-center {
+    padding: 60px 10%;
+    background: #1a1a1a;
+    color: var(--ligth);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.info-column h3 { color: var(--rouge); margin-bottom: 20px; }
+.info-column ul li { margin: 10px 0; }
+.info-column a { color: #ccc; text-decoration: none; transition: 0.3s; }
+.info-column a:hover { color: var(--rouge); }
+
+.social-about { margin-top: 20px; font-size: 2rem; display: flex; gap: 15px; }
+.social-about i { cursor: pointer; transition: 0.3s; }
+.social-about i:hover { color: var(--rouge); transform: scale(1.2); }
+
+/* Animations simple */
+.fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
+.fade-in.appear { opacity: 1; transform: translateY(0); }
+
+/* Style de la marque */
+.brand-name {
+    color: #ff0000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Le fameux trait <hr/> stylisé */
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    margin: 50px 0; /* Un grand espace pour laisser respirer le contenu */
+    width: 80%;    /* On ne prend pas toute la largeur pour plus d'élégance */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Palette et Typo */
+.brand-red {
+    color: #e63946; /* Un rouge plus moderne et profond */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.informations {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.8; /* Crucial pour la lisibilité */
+    color: #333;
+}
+
+.info-block h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+    position: relative;
+}
+
+/* Style de la liste pour éviter l'effet "bloc" */
+.info-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-block li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #e63946; /* Rappel de la marque sur chaque point */
+    transition: transform 0.3s ease;
+}
+
+.info-block li:hover {
+    transform: translateX(10px); /* Petit effet interactif au survol */
+}
+
+/* Ton fameux trait de séparation enfin visible et stylé */
+.elegant-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 50px auto;
+    width: 80%;
+}

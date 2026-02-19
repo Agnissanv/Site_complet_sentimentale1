@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/boutique.css">
+    <title>SENTIMENTALE - Boutique</title>
+
+</head>
+<body>
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- Navigation -->
+    <!-- 1111111111111111111111111111111111 -->
+        <nav>
+            <a href="#" class="logo">SENTIMENTALE - Boutique</a>
+                <ul class="navigations">
+                    <li><a href="#Accueil" class="active">Accueil</a></li> <!-- section d'accueil -->
+                    <li><a href="#news">Nouveutés</a></li> <!--section nouveuatés  -->
+                    <li><a href="#products">Produits</a></li><!-- section des produits -->
+                    <li><a href="#reviews">Avis</a></li><!-- section des produits -->
+                </ul>
+            <div class="navigations-icon">
+                <i id="search-icon" class='bx bx-search-alt-2'></i>
+                <i id="cart-icon" class='bx bx-cart-add'></i>
+                <i id="user-icon" class='bx bxs-user'></i>
+                <i id="menu-icon" class='bx bx-menu'></i>
+            </div>
+            <!-- recherche -->
+            <div class="search-container">
+                <input type="search" placeholder="Que recherchez-vous ?">
+            </div>
+            <!-- panier -->
+             <div class="cart-container">
+
+                <div class="cart-card">
+                    <img src="images/Pull-a-capuche-bleu-nuit3-no-plan.png" alt="Pull a capuche bleu nuit">
+                    <div class="cart-text">
+                        <h3>Pull a capuche bleu nuit - XL</h3>
+                        <span>15.000 FCFA</span>
+                        <span>1x</span>
+                    </div>
+                    <i class='bx bxs-trash'></i>
+                </div>
+                <div class="cart-card">
+                    <img src="images/Pull-à-capuche-gris2-no-plan.png" alt="Pull a capuche gris">
+                    <div class="cart-text">
+                        <h3>Pull a capuche gris XXL</h3>
+                        <span>15.000 FCFA</span>
+                        <span>1x</span>
+                    </div>
+                    <i class='bx bxs-trash'></i>
+                </div>
+                <h2>Total: 30.000 FCFA</h2>
+                <a href="#" class="btn">Voir panier</a>
+             </div>
+
+             <!-- compte utilisateur -->
+              <div class="user-container">
+
+                <h2>Connectez-vous</h2>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Mots de passe">
+                <input class="btn-user" type="submit" value="connexion">
+                <p>Mots de passe oublié ? <a href="#">Redefinir le mot de passe</a></p>
+                <p>Pas de compte ? <a href="#">Créer un compte !</a></p>
+              </div>
+        </nav>
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- Home -->
+    <!-- 1111111111111111111111111111111111 -->
+     <section id="Accueil" class="home">
+        <div class="home-content">
+            <span>ÉDITION LIMITÉE</span>
+            <h1>Portez ce que vous ressentez.</h1>
+            <a href="#" class="btn">Voir le catalogue</a>
+        </div>
+        <div class="home-img">
+            <img src="images/Pull-a-capuche-bleu-nuit-no-plan.png" alt="pull sentimtntale à capuche bleu nuit">
+            </div>
+     </section>
+
+
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- News -->
+    <!-- 1111111111111111111111111111111111 -->
+     <section id="news" class="news">
+        <div class="section-heading">
+            <h2>Nouvel <span>Arrivage</span></h2>
+        </div>
+        <div class="news-cont swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="images/Pull-a-capuche-bleu-nuit2.png" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="images/Pull-à-capuche-gris2.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="images/Pull-Over-blanc2.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="images/Tishirt-gris-fonce2.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="images/Pull-a-capuche-bleu-nuit5.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="images/Pull-à-capuche-gris5.jpg" alt="">
+                    <div class="content">
+                        <a href="#" class="btn">Ajouter au panier</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </section>
+
+
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- produit -->
+    <!-- 1111111111111111111111111111111111 -->
+
+    <section class="products" id="products">
+        <div class="section-heading">
+            <h2>Nos <span>Produits</span></h2>
+        </div>
+        <div class="products-container">
+
+            <div class="products-box">
+                <img src="images/Pull-a-capuche-bleu-nuit5.jpg" alt="">
+                <div class="products-box-content">
+                    <h2>Pull à capuche bleu marine</h2>
+                    <div class="starts">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>15.000 FCFA</span>
+                    <i class='bx bxs-cart'></i>
+                </div>
+            </div>
+            
+            <div class="products-box">
+                <img src="images/Pull-à-capuche-gris3.jpg" alt="">
+                <div class="products-box-content">
+                    <h2>Pull à capuche bleu marine</h2>
+                    <div class="starts">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>15.000 FCFA</span>
+                    <i class='bx bxs-cart'></i>
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="images/Pull-Over-blanc4.jpg" alt="">
+                <div class="products-box-content">
+                    <h2>Pull à capuche bleu marine</h2>
+                    <div class="starts">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>15.000 FCFA</span>
+                    <i class='bx bxs-cart'></i>
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="images/Tishirt-gris-fonce4.jpg" alt="">
+                <div class="products-box-content">
+                    <h2>Pull à capuche bleu marine</h2>
+                    <div class="starts">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <span>15.000 FCFA</span>
+                    <i class='bx bxs-cart'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- les avis -->
+    <!-- 1111111111111111111111111111111111 -->
+
+    <section class="reviews" id="reviews">
+    <div class="section-heading">
+        <h2>Avis <span>Client</span></h2>
+    </div>
+
+    <div class="reviews-container">
+
+        <div class="reviews-box">
+            <img src="images/client6.jpeg" alt="Avis du client Jonas kouibli">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>J'ai enfin trouvé un hoodie qui ne se déforme pas après trois lavages. La coupe est impeccable et le coton est incroyablement dense. Un investissement, pas juste un achat.</p>
+            <h3>Jonas kouibli</h3>
+        </div>
+        <div class="reviews-box">
+            <img src="images/client5.jpeg" alt="Avis du client François Doukouré">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half'></i>
+            </div>
+            <p>Commandé le lundi, reçu le mardi à Abidjan ! Le bleu nuit est encore plus profond en vrai. C'est devenu mon uniforme officiel pour sortir</p>
+            <h3>François Doukouré</h3>
+        </div>
+        <div class="reviews-box">
+            <img src="images/client3.jpeg" alt="Avis du client Isaac Agnissan">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>En tant qu'amateur de belles matières, je suis bluffé. Le confort est digne des grandes maisons de luxe, mais avec une âme. On sent que c'est fait pour durer.</p>
+            <h3>Isaac Agnissan</h3>
+        </div>
+        <div class="reviews-box">
+            <img src="images/client4.jpeg" alt="Avis du client Supect95">
+            <div class="stars">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bx-star'></i>
+            </div>
+            <p>Le flow est juste incroyable. La coupe tombe parfaitement sur les épaules, c'est du lourd ! Si vous voulez sortir du lot, c'est ici que ça se passe.</p>
+            <h3>Supect95</h3> 
+        </div>
+        
+
+       </div>
+    </section>
+
+
+    <!-- 1111111111111111111111111111111111 -->
+    <!-- footer/ pied de la page -->
+    <!-- 1111111111111111111111111111111111 -->
+
+    <footer>
+        <div class="footer-box">
+            <h2>SENTIMENTALE</h2>
+            <div class="social">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-youtube'></i>
+                <i class='bx bxl-whatsapp'></i>
+            </div>
+            <p>Besoin d'un conseil ? Notre équipe vous répond avec le cœur.</p>
+            <a href="mailto:contact@sentimentale.com" class="btn">Nous contacter</a>
+        </div>
+
+        <div class="footer-box">
+            <h2>Informations</h2>
+            <ul>
+                <li><a href="about.html#informations">Conditions de vente</a></li>
+                <li><a href="about.html#informations">Mention légales</a></li>
+                <li><a href="about.html#informations">Support</a></li>
+                <li><a href="about.html#informations">Nous contacter</a></li>
+            </ul>
+                <a href="#products"><button> Acheter</button></a>
+        </div>
+
+        
+        <div class="footer-box">
+            <h2>Nos locaux</h2> 
+            <!-- nos locaux sera sur la page à propos -->
+            <ul>
+                <li><a href="#">Côte d'Ivoire</a></li>
+                <li><a href="#">Sénégal</a></li>
+                <li><a href="#">Maroc</a></li>
+                <li><a href="#">Bénin</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h2>Paiement</h2>
+            <div class="paiement">
+                <img src="images/bank.png" alt="">
+                <img src="images/wave.png" alt="">
+                <img src="images/orange.png" alt="">
+                <img src="images/moov.png" alt="">
+                <img src="images/mtn.png" alt="">
+            </div>
+        </div>     
+    </footer>
+
+    <div class="copy">
+        <p>&copy;SENTIMENTALE - Tous droits reservés - 2026</p>
+    </div>
+
+
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
+
+
+

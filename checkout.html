@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTIMENTALE - Formulaire de livraison et paiement</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    
+    <script src="https://checkout.cinetpay.com/sdk/dist/sdk.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>SENTIMENTALE</h1>
+            <div class="right">
+                <p><a href="index.html">Accueil</a></p>
+                <p><a href="Boutique.html">Boutique</a></p>
+                <p><a href="contact.html">Contact</a></p>
+                <p><a href="about.html">À propos</a></p>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding: 50px; text-align: center;">
+        <h2>Finaliser ma commande</h2>
+        <p>Montant à payer : <strong>5 000 FCFA</strong></p>
+        
+        <div style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" id="customer_name" placeholder="Nom complet" style="padding: 10px;">
+            <input type="email" id="customer_email" placeholder="Email (Optionnel)" style="padding: 10px;">
+            <input type="tel" id="customer_phone" placeholder="Numéro de téléphone" style="padding: 10px;">
+            
+            <button onclick="payerViaCinetPay()" style="background-color: #000; color: #fff; padding: 15px; cursor: pointer; border: none; font-weight: bold;">
+                PAYER MAINTENANT
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="column">
+            <h3>Aide</h3>
+            <p>Contact@sentimentale</p>
+        </div>
+        <div class="column">
+            <h3>Réseaux</h3>
+            <p>Instagram</p>
+        </div>
+    </footer>
+
+    <script>
+        function payerViaCinetPay() {
+            // Récupération des infos saisies par le client
+            const name = document.getElementById('customer_name').value;
+            const phone = document.getElementById('customer_phone').value;
+
+            if(name === "" || phone === "") {
+                alert("S'il vous plaît, remplissez votre nom et votre numéro.");
+                return;
+            }
+
+            // Configuration
+            CinetPay.setConfig({
+                apikey: 'TON_API_KEY_ICI', // <--- REMPLACE PAR TA CLÉ API
+                site_id: 'TON_SITE_ID_ICI', // <--- REMPLACE PAR TON SITE ID
+                notify_url: 'https://votre-site.com/notify' // URL de notification (facultatif sans backend)
+            });
+
+            // Lancement du guichet
+            CinetPay.getCheckout({
+                transaction_id: Math.floor(Math.random() * 100000000).toString(),
+                amount: 5000, // Le prix du produit
+                currency: 'XOF',
+                channels: 'ALL',
+                description: 'Achat sur SENTIMENTALE',
+                customer_name: name,
+                customer_phone_number: phone,
+                customer_country: 'CI',
+                customer_city: 'Abidjan',
+                customer_address: 'Côte d\'Ivoire'
+            });
+
+            // Réponse de CinetPay
+            CinetPay.waitResponse(function(data) {
+                if (data.status == "ACCEPTED") {
+                    alert("Merci " + name + " ! Paiement réussi. Nous préparons votre livraison.");
+                    window.location.href = "merci.html"; // Redirige vers une page de succès
+                } else {
+                    alert("Le paiement n'a pas pu aboutir.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

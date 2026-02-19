@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ############################ */
+/* css global */
+/* ############################ */
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+h1,h2{
+    color: var(--ligth);
+}
+.stars{
+    color: rgb(255, 170, 0);
+    margin-top: 0.5rem;
+}
+:root {
+   --rouge: rgb(250, 74, 74);
+   --couleur2:rgb(123,9,34);
+   --text:#333;
+   --ligth:#fff;
+   --second:#e2e2e2;
+   --box-shadow:2px 2px 10px 2px rgba(0,0,0,.2)
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--rouge);
+    border-radius:3rem ;
+}
+html::-webkit-scrollbar-track {
+    background: #000;
+   
+}
+section{
+    padding: 50px 80px;
+}
+.section-heading{
+    text-align: center;
+    position: relative;
+}
+.section-heading h2{
+    font-weight: 600;
+    font-size: clamp(30px,4vw,50px);
+    background: linear-gradient( rgb(202, 48, 48), #571212ee);
+    position: relative;
+    z-index: 4;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 0.5rem solid var(--second);
+    border-radius: 1rem;
+}
+.section-heading h2 span{
+    color: var(--rouge);
+}
+.section-heading::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 2px;
+    background: var(--second);
+    z-index: 2;
+}
+button{
+    padding: 5px 10px;
+    border: 1px solid var(--rouge);
+    background: transparent;
+    color: var(--rouge);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+button:hover{
+    color: var(--ligth);
+    background-color: var(--rouge);
+}
+a{
+    color: inherit;
+    transition: color 0.5s;
+}
+
+header{
+    background: linear-gradient(#000000ee, #571212ee, rgb(202, 48, 48));
+}
+header nav{
+    padding: 30px 5% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav h1{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--rouge);
+    text-shadow: 2px 2px 4px #000000aa;
+    
+}
+header nav .right {
+    display: flex;
+    align-items: center;
+}
+header nav .right p{
+    margin: 0 15px 0 0;
+    color: #ccc;
+}
+header nav .right a:hover {
+    color: var(--rouge);
+    cursor: pointer;
+}
+.presentation{
+    display: flex;
+    padding: 30px 5%;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+.presentation .product-presentation{
+    width: 100%;
+    flex-shrink: 3;
+}
+.presentation .product-presentation h1{
+    margin: 0;
+    font-size: 4vw;
+    width: 80%;
+}
+.presentation .product-presentation h1 span{
+    margin: 0;
+    font-size: 3vw;
+    width: 60%;
+}
+.presentation .product-presentation p{
+    font-weight: 300;
+    color: var(--ligth);
+}
+.presentation .product-presentation button{
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.presentation .image-presentation img {
+    width: 100%;
+}
+
+.first .product-presentation button{
+    background-color: var(--rouge);
+    border: 1px solid var(--rouge);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
+.first .product-presentation button:hover{
+    background-color: inherit;
+    color: var(--rouge);
+}
+.first .product-presentation .small-images {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px; /* Ajoute de l'espace entre les vignettes */
+}
+.first .product-presentation .small-images .small {
+    padding: 10px;
+    background-color: rgba(165, 104, 104, 0.4); /* Plus léger pour ne pas étouffer l'image */
+    margin: 0 15px 15px 0;
+    border: 1px solid var(--rouge); /* Un rappel de la couleur de marque */
+    border-radius: 20px;
+    transition: filter 0.5s;
+    cursor: pointer;
+}
+.first .product-presentation .small-images .small:hover{
+    filter: brightness(50%);
+   
+}
+.first .product-presentation .small-images .small img {
+    width: 120px;
+}
+
+.second {
+    margin: 0;
+    background-color: #1b0000ee;
+}
+.second .product-presentation .new {
+    color: var(--rouge);
+}
+.second .product-presentation button{
+    background-color: inherit;
+    border: 1px solid var(--rouge);
+    color: var(--rouge);
+
+}
+.second .product-presentation button:hover{
+    background-color: var(--rouge);
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
+/* ############################ */
+/* les avis */
+/* ############################ */
+section.reviews{
+    background: linear-gradient( rgb(202, 48, 48), #571212ee, #000000ee);
+}
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.reviews-box{
+    box-shadow: var(--box-shadow);
+    border-bottom: solid var(--couleur2) 3px;
+    padding: 2rem;
+    text-align: center;
+}
+.reviews-box:hover{
+    background: var(--second);
+}
+.reviews-box img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.reviews-box .stars{
+    color: rgb(255, 170, 0);
+    margin-top: 0.5rem;
+}
+.reviews-box h3{
+    font-size: 1rem;
+    color: var(--text);
+}
+.reviews-box p{
+    margin: 1rem 0;
+}
+/* ############################ */
+/* footer */
+/* ############################ */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 1.5rem;
+    color: var(--ligth);
+    background: var(--text);
+    padding: 50px 20px;
+}
+footer .social{
+    margin-top: 0.5rem;
+    display: flex;
+    column-gap: 0.5rem;
+}
+footer .social .bx{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--rouge);
+    transition: background.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 50%;
+}
+footer .social .bx:hover{
+    background: var(--couleur2);
+}
+footer h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+footer a{
+    color: var(--rouge);
+}
+footer a:hover{
+    color: var(--couleur2);
+}
+footer img{
+    width: 50px;
+    border-radius: 5px;
+    display: flex;
+    margin: 5px;
+}
+.copy{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 13px;
+    background: var(--ligth);
+    color: black;
+}
+
+@media screen and (max-width: 600px) {
+    header nav .right a{
+        display: none;
+    }
+    .presentation .product-presentation h1{
+        font-size: 2em;
+    }
+    .presentation .image-presentation {
+        display: none;
+    }
+    .first .product-presentation .small-images .small img {
+        width: 80px;
+    }
+    footer {
+        justify-content: flex-start;
+    }
+    footer .column {
+        width: 80%;
+    }
+}
