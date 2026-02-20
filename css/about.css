@@ -15,7 +15,9 @@
     justify-content: center;
     text-align: center;
     color: var(--ligth);
-    padding: 0 5%;
+    padding: 100px 0;
+    padding-top: 150px;
+    margin-top: 15px;
 }
 
 .hero-content h1 {

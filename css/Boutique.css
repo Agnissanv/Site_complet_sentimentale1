@@ -521,9 +521,42 @@ footer img{
         display: flex;
         column-gap: 1rem;
     }
+    .home {
+        /* On crée un espace vide pour compenser la hauteur du menu fixe */
+        padding-top: 150px; 
+        
+        /* On arrête de centrer au milieu sur mobile pour éviter que le texte remonte */
+        align-items: start; 
+        
+        /* On réduit un peu la hauteur minimum pour que ça respire mieux sur petit écran */
+        padding-bottom: 50px;
+    }
+    .home-content h1 {
+        /* On ajuste la taille de ton hook pour qu'il soit percutant mais adapté au mobile */
+        font-size: clamp(28px, 7vw, 45px); 
+    }
+    .home img {
+        /* On réduit la largeur à 85% du conteneur pour créer des marges */
+        width: 85%; 
+        
+        /* On s'assure qu'elle ne dépasse jamais une certaine taille */
+        max-width: 400px; 
+        
+        /* Pour centrer une image qui n'est pas à 100% de largeur */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* Un petit espace au-dessus pour détacher l'image du bouton */
+        margin-top: 2rem; 
+    }
     @media screen and (max-width: 380px){
         .cart-card img{
             width: 70px;
+        }
+
+        .cart-container{
+            top: -700px;
         }
     }
 
