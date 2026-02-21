@@ -22,6 +22,9 @@ html, body {
     padding: 0;
     background-color: #ff0000; /* Si une fissure apparaît, elle sera noire et invisible */
 }
+body {
+  padding-bottom: 43px; /* Ajuste selon la hauteur de ta barre */
+}
 
 /* Force TOUS les éléments à rester dans le cadre */
 * {
@@ -355,6 +358,47 @@ footer img{
     color: black;
 }
 
+/* "News Ticker" ou "Bande défilante" */
+.news-ticker-container {
+  width: 100%;
+  overflow: hidden; /* Coupe tout ce qui dépasse du cadre de l'écran */
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 12px 0;
+  display: flex;
+  position: fixed; /* Le secret est ici : la barre ne bouge plus */
+  bottom: 0;      /* Elle reste collée en BAS (style TV) */
+  left: 0;
+  z-index: 9999;  /* Pour passer au-dessus de tous les autres éléments du site */
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2); /* Ajoute une ombre pour un effet 3D pro */
+}
+
+.news-ticker-inner {
+  display: flex;
+  white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+}
+
+.news-ticker-item {
+  display: flex;
+  flex-shrink: 0; /* TRÈS IMPORTANT : Empêche le texte de se rétrécir */
+  padding-right: 50px; /* Espace entre la fin et le début du message */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  /* L'animation fait défiler exactement 100% de la largeur du texte */
+  animation: scroll-total 15s linear infinite;
+}
+
+@keyframes scroll-total {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* Optionnel : Pause au survol pour que le parent puisse lire tranquillement */
+.news-ticker-container:hover .news-ticker-item {
+  animation-play-state: paused;
+  cursor: pointer;
+}
 
 
 /* ############################ */
