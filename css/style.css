@@ -253,14 +253,17 @@ section.reviews{
     gap: 1rem;
     margin-top: 2rem;
 }
-.reviews-box{
-    box-shadow: var(--box-shadow);
-    border-bottom: solid var(--couleur2) 3px;
-    padding: 2rem;
-    text-align: center;
+.reviews-box {
+    background: rgba(255, 255, 255, 0.03); /* Un fond ultra-léger pour détacher du noir */
+    border: 1px solid rgba(250, 74, 74, 0.2); /* Une bordure rouge très subtile */
+    border-radius: 15px; /* Des coins arrondis pour le côté premium */
+    transition: transform 0.3s ease, background 0.3s ease;
+    justify-items: center;
 }
-.reviews-box:hover{
-    background: var(--second);
+.reviews-box:hover {
+    transform: translateY(-10px); /* La boîte se soulève quand on passe dessus */
+    background: rgba(250, 74, 74, 0.1); /* Elle se teinte légèrement en rouge */
+    border-color: var(--rouge);
 }
 .reviews-box img{
     width: 60px;
@@ -272,12 +275,17 @@ section.reviews{
     color: rgb(255, 170, 0);
     margin-top: 0.5rem;
 }
-.reviews-box h3{
-    font-size: 1rem;
-    color: var(--text);
+.reviews-box h3 {
+    color: var(--rouge) !important; /* On met le nom en avant */
+    margin-top: 15px;
+    letter-spacing: 1px;
+    margin: 1rem ;
 }
 .reviews-box p{
-    margin: 1rem 0;
+    margin: 1rem ;
+    font-style: italic;
+    color: #ddd;
+    line-height: 1.6;
 }
 /* ############################ */
 /* footer */
