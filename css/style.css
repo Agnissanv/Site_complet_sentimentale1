@@ -271,6 +271,7 @@ section.reviews{
     border-radius: 15px; /* Des coins arrondis pour le côté premium */
     transition: transform 0.3s ease, background 0.3s ease;
     justify-items: center;
+    padding: 0.5rem;
 }
 .reviews-box:hover {
     transform: translateY(-10px); /* La boîte se soulève quand on passe dessus */
