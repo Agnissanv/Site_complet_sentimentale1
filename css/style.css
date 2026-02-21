@@ -190,7 +190,13 @@ header nav .right a:hover {
 }
 .presentation .image-presentation img {
     width: 100%;       /* Elle s'adapte au container */
-    max-width: 500px;  /* Mais ne dépasse jamais 500px sur PC */
+    max-width: 450px;  /* Mais ne dépasse jamais 500px sur PC */
+    height: auto;
+    display: block;
+}
+.presentation .image-presentation2{
+    width: 100%;       /* Elle s'adapte au container */
+    max-width: 350px;  /* Mais ne dépasse jamais 500px sur PC */
     height: auto;
     display: block;
 }
