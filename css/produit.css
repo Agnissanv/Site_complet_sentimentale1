@@ -303,8 +303,6 @@ nav.active{
 /* ############################ */
 /* info produit */
 /* ############################ */
-
-
 /* ############################ */
 /* info produit */
 /* ############################ */
@@ -509,19 +507,15 @@ nav.active{
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* ############################ */
 /* les avis */
 /* ############################ */
-
+/* ############################ */
+/* les avis */
+/* ############################ */
+section.reviews{
+    background: var(--ligth);
+}
 .reviews-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,auto));
