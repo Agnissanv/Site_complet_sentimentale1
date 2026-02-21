@@ -361,32 +361,35 @@ footer img{
 /* "News Ticker" ou "Bande défilante" */
 .news-ticker-container {
   width: 100%;
-  overflow: hidden; /* Coupe tout ce qui dépasse du cadre de l'écran */
+  overflow: hidden; 
   background: #ffffff;
   color: rgb(0, 0, 0);
   padding: 12px 0;
   display: flex;
-  position: fixed; /* Le secret est ici : la barre ne bouge plus */
-  bottom: 0;      /* Elle reste collée en BAS (style TV) */
+  position: fixed; 
+  bottom: 0;      
   left: 0;
-  z-index: 9999;  /* Pour passer au-dessus de tous les autres éléments du site */
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.2); /* Ajoute une ombre pour un effet 3D pro */
+  z-index: 9999;  
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2); 
 }
 
 .news-ticker-inner {
   display: flex;
-  white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+  white-space: nowrap; 
+  /* LE SAUVEUR EST ICI : On annule la règle globale max-width juste pour le texte défilant */
+  max-width: none !important; 
 }
 
 .news-ticker-item {
   display: flex;
-  flex-shrink: 0; /* TRÈS IMPORTANT : Empêche le texte de se rétrécir */
-  padding-right: 50px; /* Espace entre la fin et le début du message */
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  /* L'animation fait défiler exactement 100% de la largeur du texte */
-  animation: scroll-total 15s linear infinite;
+  flex-shrink: 0; 
+  padding-right: 50px; 
+  font-family: 'Montserrat', sans-serif; /* J'ai remis votre police globale pour rester cohérent */
+  font-weight: 600;
+  font-size: 14px;
+  /* LE SAUVEUR EST ICI AUSSI : On libère la largeur et on ralentit l'animation (40s au lieu de 15s) */
+  max-width: none !important;
+  animation: scroll-total 40s linear infinite;
 }
 
 @keyframes scroll-total {
@@ -394,7 +397,7 @@ footer img{
   to { transform: translateX(-100%); }
 }
 
-/* Optionnel : Pause au survol pour que le parent puisse lire tranquillement */
+/* Pause au survol pour que le parent puisse lire tranquillement */
 .news-ticker-container:hover .news-ticker-item {
   animation-play-state: paused;
   cursor: pointer;
