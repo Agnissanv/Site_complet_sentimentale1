@@ -141,6 +141,12 @@ header nav .right a:hover {
     color: var(--rouge);
     cursor: pointer;
 }
+.menu-icon{
+    font-size: 2rem;
+    color: var(--ligth);
+    display: none;
+    cursor: pointer;
+}
 /* --- SECTION PRÉSENTATION UNIFIÉE --- */
 .presentation {
     display: flex;
