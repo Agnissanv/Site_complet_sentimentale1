@@ -20,6 +20,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-color: #ff0000; /* Si une fissure apparaît, elle sera noire et invisible */
 }
 
 /* Force TOUS les éléments à rester dans le cadre */
@@ -111,6 +112,8 @@ a{
 
 header{
     background: linear-gradient(#000000ee, #571212ee, rgb(202, 48, 48));
+    width: 100%;
+    overflow: hidden;
 }
 header nav{
     padding: 30px 5% 0 5%;
@@ -138,16 +141,18 @@ header nav .right a:hover {
     color: var(--rouge);
     cursor: pointer;
 }
-.presentation{
+/* --- SECTION PRÉSENTATION UNIFIÉE --- */
+.presentation {
     display: flex;
-    padding: 30px 5%;
-    margin-top: 5%;
+    padding: 50px 5%;
     align-items: center;
     justify-content: space-between;
+    width: 100%; /* Sécurité */
+    overflow: hidden; /* Empêche tout débordement ici */
 }
-.presentation .product-presentation{
+.presentation .product-presentation {
+    flex: 1;
     width: 100%;
-    flex-shrink: 3;
 }
 .presentation .product-presentation h1{
     margin: 0;
@@ -172,8 +177,16 @@ header nav .right a:hover {
     border-radius: 10px;
     cursor: pointer;
 }
+.presentation .image-presentation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 .presentation .image-presentation img {
-    width: 50%;
+    width: 100%;       /* Elle s'adapte au container */
+    max-width: 500px;  /* Mais ne dépasse jamais 500px sur PC */
+    height: auto;
+    display: block;
 }
 
 .first .product-presentation button{
@@ -376,10 +389,11 @@ footer img{
     /* --- Hero Section --- */
     /* On empile les éléments pour un flux de lecture logique : Titre -> Image -> Bouton */
     .presentation {
-        flex-direction: column; 
+        flex-direction: column;
         text-align: center;
-        margin-top: 15%;
-        padding: 20px 5%;
+        padding: 60px 5%; /* On utilise le padding pour l'espace, pas la margin */
+        margin-top: 0;    /* ON SUPPRIME LA FISSURE ICI */
+        width: 100%;
     }
 
     .presentation .product-presentation {
@@ -388,14 +402,21 @@ footer img{
     }
     
     .presentation .image-presentation {
-        width: 100%;
-        order: 1; /* L'image attire l'oeil en premier */
+        order: 1;
+        width: 100%; /* Prend toute la largeur disponible sans dépasser */
         margin-bottom: 20px;
+    }
+
+    /* Le verrou final pour l'image sur mobile */
+    .presentation .image-presentation img {
+        width: 90%;      /* On laisse 5% de vide de chaque côté pour la sécurité */
+        max-width: 320px; /* Taille parfaite pour un écran de smartphone */
+        margin: 0 auto;  /* Centrage horizontal */
     }
 
     .presentation .product-presentation h1 {
         font-size: 8vw;
-        width: 100%;
+        width: 100%;    /* Empêche le titre de pousser les murs */
     }
 
     .presentation .product-presentation h1 span {
