@@ -14,6 +14,23 @@
     border: none;
     box-sizing: border-box;
 }
+/* Bloque tout débordement horizontal indésirable */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Force TOUS les éléments à rester dans le cadre */
+* {
+    max-width: 100vw;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 h1,h2{
     color: var(--ligth);
 }
@@ -140,7 +157,7 @@ header nav .right a:hover {
 .presentation .product-presentation h1 span{
     margin: 0;
     font-size: 3vw;
-    width: 60%;
+    width: 70%;
 }
 .presentation .product-presentation p{
     font-weight: 300;
@@ -156,7 +173,7 @@ header nav .right a:hover {
     cursor: pointer;
 }
 .presentation .image-presentation img {
-    width: 100%;
+    width: 50%;
 }
 
 .first .product-presentation button{
@@ -324,73 +341,67 @@ footer img{
 @media (max-width: 768px) {
     /* --- Navigation Mobile --- */
     #menu-icon {
-        display: block !important; /* On affiche le burger */
-    }
-
-    @media (max-width: 768px) {
-    /* ... (tes autres règles) ... */
-
-    header nav .right {
-        position: fixed; /* Fixé par rapport à l'écran, pas au header */
-        top: 0;
-        right: -100%; /* Il attend sagement à droite de l'écran */
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5); /* Noir profond pour l'aspect haut de gamme */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre les liens verticalement au milieu de l'écran */
-        align-items: center;
-        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* Animation fluide */
-        z-index: 1000; /* Passe au-dessus de TOUT */
-    }
-
-    /* Quand on clique sur le burger, le menu glisse vers la gauche */
-    header nav .right.active {
-        right: 0;
-    }
-
-    /* Pour que l'icône burger reste visible au-dessus du menu noir */
-    #menu-icon {
+        display: block !important;
         position: relative;
         z-index: 1001; 
-        display: block !important;
+    }
+
+    header nav .right {
+        position: fixed; 
+        top: 0;
+        right: -100%; 
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9); /* Plus opaque pour plus d'immersion */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); 
+        z-index: 1000; 
+    }
+
+    header nav .right.active {
+        right: 0;
     }
     
     header nav .right p {
         margin: 1.5rem 0;
-        font-size: 1.8rem; /* On grossit le texte pour le confort du pouce */
+        font-size: 1.8rem; 
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 2px;
     }
-}
 
-    /* --- Hero Section (L'émotion d'abord) --- */
+    /* --- Hero Section --- */
+    /* On empile les éléments pour un flux de lecture logique : Titre -> Image -> Bouton */
     .presentation {
-        flex-direction: column-reverse; /* L'IMAGE PASSE AU DESSUS OU LE TEXTE EN DESSOUS */
+        flex-direction: column; 
         text-align: center;
         margin-top: 15%;
+        padding: 20px 5%;
     }
 
     .presentation .product-presentation {
         width: 100%;
+        order: 2; /* Le texte vient après l'image sur mobile */
+    }
+    
+    .presentation .image-presentation {
+        width: 100%;
+        order: 1; /* L'image attire l'oeil en premier */
+        margin-bottom: 20px;
     }
 
     .presentation .product-presentation h1 {
-        font-size: 2.2rem;
+        font-size: 8vw;
         width: 100%;
     }
 
     .presentation .product-presentation h1 span {
-        font-size: 1.5rem;
-    }
-
-    /* On ne cache plus l'image, on l'adapte ! */
-    .presentation .image-presentation {
-        display: block; 
-        width: 80%;
-        margin-bottom: 30px;
+        font-size: 5vw;
+        display: block;
+        margin-top: 10px;
     }
 
     .first .product-presentation .small-images {
@@ -399,17 +410,14 @@ footer img{
 
     /* --- Avis Clients --- */
     .reviews-container {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        grid-template-columns: 1fr;
     }
 
     /* --- Footer --- */
     footer {
-        grid-template-rows: 1fr;
         text-align: center;
     }
-
     footer .social, footer .paiement {
         justify-content: center;
-        display: grid;
     }
 }
