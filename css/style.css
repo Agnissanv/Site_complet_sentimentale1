@@ -23,7 +23,7 @@ html, body {
     background-color: #ff0000; /* Si une fissure apparaît, elle sera noire et invisible */
 }
 body {
-  padding-bottom: 43px; /* Ajuste selon la hauteur de ta barre */
+  padding-bottom: 40px; /* Ajuste selon la hauteur de ta barre */
 }
 
 /* Force TOUS les éléments à rester dans le cadre */
@@ -383,7 +383,7 @@ footer img{
 .news-ticker-item {
   display: flex;
   flex-shrink: 0; 
-  padding-right: 50px; 
+  padding-right: 300px; 
   font-family: 'Montserrat', sans-serif; /* J'ai remis votre police globale pour rester cohérent */
   font-weight: 600;
   font-size: 14px;
