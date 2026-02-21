@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+   --rouge: rgb(250, 74, 74);
+   --couleur2:rgb(123,9,34);
+   --text:#333;
+   --ligth:#fff;
+   --second:#e2e2e2;
+   --box-shadow:2px 2px 10px 2px rgba(0,0,0,.2)
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb {
+    background: var(--rouge);
+    border-radius:3rem ;
+}
+html::-webkit-scrollbar-track {
+    background: #000;
+   
+}
+section{
+    padding: 50px 80px;
+}
+.section-heading{
+    text-align: center;
+    position: relative;
+}
+.section-heading h2{
+    font-weight: 600;
+    font-size: clamp(30px,4vw,50px);
+    background: linear-gradient( rgb(202, 48, 48), #571212ee);
+    position: relative;
+    z-index: 4;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 1rem;
+    border: 0.5rem solid var(--second);
+    border-radius: 1rem;
+}
+.section-heading h2 span{
+    color: var(--rouge);
+}
+.section-heading::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 2px;
+    background: var(--second);
+    z-index: 2;
+}
+button{
+    padding: 5px 10px;
+    border: 1px solid var(--rouge);
+    background: transparent;
+    color: var(--rouge);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+button:hover{
+    color: var(--ligth);
+    background-color: var(--rouge);
+}
+a{
+    color: inherit;
+    transition: color 0.5s;
+}
+
+header{
+    background: linear-gradient(#000000ee, #571212ee, rgb(202, 48, 48));
+    width: 100%;
+    overflow: hidden;
+}
+header nav{
+    padding: 30px 5% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav h1{
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--rouge);
+    text-shadow: 2px 2px 4px #000000aa;
+    
+}
+header nav .right {
+    display: flex;
+    align-items: center;
+}
+header nav .right p{
+    margin: 0 15px 0 0;
+    color: #ccc;
+}
+header nav .right a:hover {
+    color: var(--rouge);
+    cursor: pointer;
+}
+.menu-icon{
+    font-size: 2rem;
+    color: var(--ligth);
+    display: none;
+    cursor: pointer;
+}
+/* ############################ */
+/* les avis */
+/* ############################ */
+section.reviews{
+    background: linear-gradient( rgb(202, 48, 48), #571212ee, #000000ee);
+}
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.reviews-box {
+    background: rgba(255, 255, 255, 0.03); /* Un fond ultra-léger pour détacher du noir */
+    border: 1px solid rgba(250, 74, 74, 0.2); /* Une bordure rouge très subtile */
+    border-radius: 15px; /* Des coins arrondis pour le côté premium */
+    transition: transform 0.3s ease, background 0.3s ease;
+    justify-items: center;
+    padding: 0.5rem;
+}
+.reviews-box:hover {
+    transform: translateY(-10px); /* La boîte se soulève quand on passe dessus */
+    background: rgba(250, 74, 74, 0.1); /* Elle se teinte légèrement en rouge */
+    border-color: var(--rouge);
+}
+.reviews-box img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.reviews-box .stars{
+    color: rgb(255, 170, 0);
+    margin-top: 0.5rem;
+}
+.reviews-box h3 {
+    color: var(--rouge) !important; /* On met le nom en avant */
+    margin-top: 15px;
+    letter-spacing: 1px;
+    margin: 1rem ;
+}
+.reviews-box p{
+    margin: 1rem ;
+    font-style: italic;
+    color: #ddd;
+    line-height: 1.6;
+}
+/* ############################ */
+/* footer */
+/* ############################ */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 1.5rem;
+    color: var(--ligth);
+    background: var(--text);
+    padding: 50px 20px;
+}
+footer .social{
+    margin-top: 0.5rem;
+    display: flex;
+    column-gap: 0.5rem;
+}
+footer .social .bx{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--rouge);
+    transition: background.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 50%;
+}
+footer .social .bx:hover{
+    background: var(--couleur2);
+}
+footer h2{
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+footer a{
+    color: var(--rouge);
+}
+footer a:hover{
+    color: var(--couleur2);
+}
+footer img{
+    width: 50px;
+    border-radius: 5px;
+    display: flex;
+    margin: 5px;
+}
+.copy{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 13px;
+    background: var(--ligth);
+    color: black;
+}
+
+/* "News Ticker" ou "Bande défilante" */
+.news-ticker-container {
+  width: 100%;
+  overflow: hidden; 
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 12px 0;
+  display: flex;
+  position: fixed; 
+  bottom: 0;      
+  left: 0;
+  z-index: 9999;  
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2); 
+}
+
+.news-ticker-inner {
+  display: flex;
+  white-space: nowrap; 
+  /* LE SAUVEUR EST ICI : On annule la règle globale max-width juste pour le texte défilant */
+  max-width: none !important; 
+}
+
+.news-ticker-item {
+  display: flex;
+  flex-shrink: 0; 
+  padding-right: 300px; 
+  font-family: 'Montserrat', sans-serif; /* J'ai remis votre police globale pour rester cohérent */
+  font-weight: 600;
+  font-size: 14px;
+  /* LE SAUVEUR EST ICI AUSSI : On libère la largeur et on ralentit l'animation (40s au lieu de 15s) */
+  max-width: none !important;
+  animation: scroll-total 40s linear infinite;
+}
+
+@keyframes scroll-total {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* Pause au survol pour que le parent puisse lire tranquillement */
+.news-ticker-container:hover .news-ticker-item {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+
+/* ############################ */
+/* RESPONSIVE DESIGN OPTIMISÉ */
+/* ############################ */
+
+/* Tablettes et écrans moyens */
+@media (max-width: 991px) {
+    section {
+        padding: 40px 5%;
+    }
+
+}
+
+/* Mobiles (Smartphones) */
+@media (max-width: 768px) {
+    /* --- Navigation Mobile --- */
+    #menu-icon {
+        display: block !important;
+        position: relative;
+        z-index: 1001; 
+    }
+}
