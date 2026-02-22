@@ -190,7 +190,7 @@ nav.active{
 .cart-container{
     position: absolute;
     top: 110%;
-    right: -100vw;
+    right: -800px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -238,6 +238,15 @@ nav.active{
     row-gap: .5rem;
     transition: .2s ease-in-out;
 }
+.cart-container, .user-container{
+    width: 90vw;
+    max-width: 350px;
+}
+
+.cart-container.active, .login-container.active{
+    right: 5vw;
+}
+
 .user-container h2{
     font-size: 1rem;
 }
@@ -555,9 +564,7 @@ footer img{
             width: 70px;
         }
 
-        .cart-container{
-            top: -100vw;
-        }
+        
     }
 
 }
