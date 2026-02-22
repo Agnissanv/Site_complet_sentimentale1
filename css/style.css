@@ -425,6 +425,8 @@ footer img{
         display: block !important;
         position: relative;
         z-index: 1001; 
+        color: #fff;
+        font-size: 30px;
     }
 
     header nav .right {
