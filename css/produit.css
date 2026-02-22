@@ -35,7 +35,7 @@ html::-webkit-scrollbar-thumb {
     border-radius:3rem ;
 }
 html::-webkit-scrollbar-track {
-    background: #000;
+    background: #ffffff;
    
 }
 img{
@@ -514,7 +514,7 @@ nav.active{
 /* les avis */
 /* ############################ */
 section.reviews{
-    background: var(--ligth);
+    background: var(--ligth) !important;
 }
 .reviews-container{
     display: grid;
@@ -546,6 +546,7 @@ section.reviews{
 }
 .reviews-box p{
     margin: 1rem 0;
+    color: black;
 }
 /* ############################ */
 /* footer */
