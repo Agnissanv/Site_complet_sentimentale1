@@ -226,7 +226,9 @@ footer img{
   z-index: 9999;  
   box-shadow: 0 -4px 10px rgba(0,0,0,0.2); 
 }
-
+.news-ticker-item span{
+    color: red;
+}
 .news-ticker-inner {
   display: flex;
   white-space: nowrap; 
@@ -243,7 +245,7 @@ footer img{
   font-size: 14px;
   /* LE SAUVEUR EST ICI AUSSI : On libère la largeur et on ralentit l'animation (40s au lieu de 15s) */
   max-width: none !important;
-  animation: scroll-total 40s linear infinite;
+  animation: scroll-total 20s linear infinite;
 }
 
 @keyframes scroll-total {
