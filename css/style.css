@@ -385,6 +385,9 @@ footer img{
   z-index: 9999;  
   box-shadow: 0 -4px 10px rgba(0,0,0,0.2); 
 }
+.news-ticker-container .news-ticker-inner .news-ticker-item span{
+    color: red;
+}
 
 .news-ticker-inner {
   display: flex;
