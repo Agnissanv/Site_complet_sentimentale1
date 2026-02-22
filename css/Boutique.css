@@ -190,7 +190,7 @@ nav.active{
 .cart-container{
     position: absolute;
     top: 110%;
-    right: -100%;
+    right: -100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -199,7 +199,7 @@ nav.active{
     padding: 20px;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
-    transition: .2s ease-in-out;
+    transition: .3s ease-in-out;
 }
 .cart-card{
     display: flex;
@@ -556,7 +556,7 @@ footer img{
         }
 
         .cart-container{
-            top: -700px;
+            top: -100vw;
         }
     }
 
