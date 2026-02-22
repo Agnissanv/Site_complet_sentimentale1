@@ -435,7 +435,7 @@ footer img{
         right: -100%; 
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.9); /* Plus opaque pour plus d'immersion */
+        background: rgba(0, 0, 0, 0.5); /* Plus opaque pour plus d'immersion */
         display: flex;
         flex-direction: column;
         justify-content: center; 
