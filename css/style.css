@@ -61,6 +61,17 @@ html::-webkit-scrollbar-track {
     background: #000;
    
 }
+/* logo texte */
+
+.logo img {
+    height: 60px; /* Ajuste cette valeur selon tes besoins (ex: 40px ou 60px) */
+    width: auto;  /* Garde les proportions de l'image intactes */
+    display: block; 
+    transition: transform 0.3s ease; /* Un petit bonus pour l'effet de survol */
+}
+.logo img:hover {
+    transform: scale(1.05);
+}
 section{
     padding: 50px 80px;
 }
@@ -139,6 +150,8 @@ header nav .right {
 header nav .right p{
     margin: 0 15px 0 0;
     color: #ccc;
+    display: flex;
+    align-items: center;
 }
 header nav .right a:hover {
     color: var(--rouge);
@@ -153,7 +166,7 @@ header nav .right a:hover {
 /* --- SECTION PRÉSENTATION UNIFIÉE --- */
 .presentation {
     display: flex;
-    padding: 50px 5%;
+    padding: 30px 5%;;
     align-items: center;
     justify-content: space-between;
     width: 100%; /* Sécurité */
